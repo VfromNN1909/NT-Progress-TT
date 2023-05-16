@@ -4,9 +4,12 @@ import com.ntpro.mobileandroiddevtestwork.data.network.Server
 import com.ntpro.mobileandroiddevtestwork.data.repository.NetworkRepository
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
+@InstallIn(SingletonComponent::class)
 object AppModule {
 
     @Provides
