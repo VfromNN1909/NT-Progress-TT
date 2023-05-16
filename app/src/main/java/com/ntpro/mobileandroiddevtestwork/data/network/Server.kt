@@ -1,7 +1,8 @@
-package com.ntpro.mobileandroiddevtestwork
+package com.ntpro.mobileandroiddevtestwork.data.network
 
 import android.os.Handler
 import android.os.Looper
+import com.ntpro.mobileandroiddevtestwork.domain.model.Deal
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -70,18 +71,5 @@ class Server {
 
     private fun getRandom(min: Int, max: Int): Double {
         return min + Random.nextDouble() * (max - min)
-    }
-
-    data class Deal(
-        val id: Long,
-        val timeStamp: Date,
-        val instrumentName: String,
-        val price: Double,
-        val amount: Double,
-        val side: Side,
-    ) {
-        enum class Side {
-            SELL, BUY
-        }
     }
 }
