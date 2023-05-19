@@ -10,4 +10,6 @@ class MainActivityViewModel @Inject constructor(
     private val repository: NetworkRepository
 ) : ViewModel() {
 
+    fun getDealsFromServerFlow() = repository.getDealsFromServerFlow()
+
 }
